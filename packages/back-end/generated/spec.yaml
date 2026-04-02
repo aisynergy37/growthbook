@@ -382,8 +382,7 @@ paths:
                   type: string
                   description: Description of the feature
                 owner:
-                  type: string
-                  description: Email of the person who owns this experiment
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 project:
                   type: string
                   description: An associated project ID
@@ -809,7 +808,7 @@ paths:
                   type: string
                   description: An associated project ID
                 owner:
-                  type: string
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 defaultValue:
                   type: string
                 tags:
@@ -1360,8 +1359,7 @@ paths:
                   type: string
                   description: Description of the dimension
                 owner:
-                  type: string
-                  description: Owner of the dimension
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 datasourceId:
                   type: string
                   description: ID of the datasource this dimension belongs to
@@ -1439,8 +1437,7 @@ paths:
                   type: string
                   description: Description of the dimension
                 owner:
-                  type: string
-                  description: Owner of the dimension
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 datasourceId:
                   type: string
                   description: ID of the datasource this dimension belongs to
@@ -1550,8 +1547,7 @@ paths:
                   type: string
                   description: Name of the segment
                 owner:
-                  type: string
-                  description: Owner of the segment
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 description:
                   type: string
                   description: Description of the segment
@@ -1651,8 +1647,7 @@ paths:
                   type: string
                   description: Description of the segment
                 owner:
-                  type: string
-                  description: Owner of the segment
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 datasourceId:
                   type: string
                   description: ID of the datasource this segment belongs to
@@ -2159,8 +2154,7 @@ paths:
                   type: string
                   description: WHERE clause to add to the default experiment query
                 owner:
-                  type: string
-                  description: Email of the person who owns this experiment
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 archived:
                   type: boolean
                 status:
@@ -2549,8 +2543,7 @@ paths:
                   type: string
                   description: WHERE clause to add to the default experiment query
                 owner:
-                  type: string
-                  description: Email of the person who owns this experiment
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 archived:
                   type: boolean
                 status:
@@ -3189,8 +3182,7 @@ paths:
                     - ''
                     - api
                 owner:
-                  type: string
-                  description: Name of the person who owns this metric
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 name:
                   type: string
                   description: Name of the metric
@@ -3506,8 +3498,7 @@ paths:
                     - api
                     - admin
                 owner:
-                  type: string
-                  description: Name of the person who owns this metric
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 name:
                   type: string
                   description: Name of the metric
@@ -4002,7 +3993,7 @@ paths:
                   description: 'When type = ''list'', this is the list of values for the attribute key'
                 owner:
                   type: string
-                  description: 'The person or team that owns this Saved Group. If no owner, you can pass an empty string.'
+                  description: 'The userId or email address of the owner. If an email address is provided, it will be used to look up the userId of the matching organization member.'
                 projects:
                   type: array
                   items:
@@ -4075,8 +4066,7 @@ paths:
                     type: string
                   description: 'When type = ''list'', this is the list of values for the attribute key'
                 owner:
-                  type: string
-                  description: 'The person or team that owns this Saved Group. If no owner, you can pass an empty string.'
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 projects:
                   type: array
                   items:
@@ -4950,8 +4940,7 @@ paths:
                   type: string
                   description: Description of the fact table
                 owner:
-                  type: string
-                  description: The person who is responsible for this fact table
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 projects:
                   type: array
                   items:
@@ -5044,8 +5033,7 @@ paths:
                   type: string
                   description: Description of the fact table
                 owner:
-                  type: string
-                  description: The person who is responsible for this fact table
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 projects:
                   type: array
                   items:
@@ -5362,7 +5350,7 @@ paths:
                 description:
                   type: string
                 owner:
-                  type: string
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 projects:
                   type: array
                   items:
@@ -5743,7 +5731,7 @@ paths:
                 description:
                   type: string
                 owner:
-                  type: string
+                  $ref: '#/paths/~1saved-groups/post/requestBody/content/application~1json/schema/properties/owner'
                 projects:
                   type: array
                   items:
@@ -25541,7 +25529,7 @@ components:
         dateUpdated:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         datasourceId:
           type: string
         identifierType:
@@ -25592,6 +25580,7 @@ components:
           type: string
         owner:
           type: string
+          description: The userId of the owner
         datasourceId:
           type: string
         name:
@@ -25929,7 +25918,7 @@ components:
         id:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         datasourceId:
           type: string
         identifierType:
@@ -26017,7 +26006,7 @@ components:
         description:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         project:
           type: string
         valueType:
@@ -26500,7 +26489,7 @@ components:
             description:
               type: string
             owner:
-              type: string
+              $ref: '#/components/schemas/Metric/properties/owner'
             project:
               type: string
             tags:
@@ -26668,7 +26657,7 @@ components:
           items:
             type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         archived:
           type: boolean
         status:
@@ -27471,7 +27460,7 @@ components:
         name:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         condition:
           description: 'When type = ''condition'', this is the JSON-encoded condition for the group'
           type: string
@@ -27531,7 +27520,7 @@ components:
         description:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         projects:
           type: array
           items:
@@ -27718,7 +27707,7 @@ components:
         description:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         projects:
           type: array
           items:
@@ -28151,7 +28140,7 @@ components:
         description:
           type: string
         owner:
-          type: string
+          $ref: '#/components/schemas/Metric/properties/owner'
         isPublic:
           type: boolean
         attributes:
