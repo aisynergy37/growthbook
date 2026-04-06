@@ -1642,7 +1642,7 @@ export interface components {
       id: string;
       dateCreated: string;
       dateUpdated: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       datasourceId: string;
       identifierType: string;
@@ -1664,7 +1664,7 @@ export interface components {
       managedBy: "" | "api" | "config" | "admin";
       dateCreated: string;
       dateUpdated: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       datasourceId: string;
       name: string;
@@ -1797,7 +1797,7 @@ export interface components {
     };
     Segment: {
       id: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       datasourceId: string;
       identifierType: string;
@@ -1848,7 +1848,7 @@ export interface components {
       dateUpdated: string;
       archived: boolean;
       description: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       project: string;
       /** @enum {string} */
@@ -2473,7 +2473,7 @@ export interface components {
       dateUpdated: string;
       archived: boolean;
       description: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       project: string;
       /** @enum {string} */
@@ -3415,7 +3415,7 @@ export interface components {
           /** @description Metadata fields captured in this revision (only present when metadata gating is enabled) */
           metadata?: {
             description?: string;
-            /** @description The userId of the owner */
+            /** @description The userId of the owner (or raw owner name/email for legacy records) */
             owner?: string;
             project?: string;
             tags?: (string)[];
@@ -4998,7 +4998,7 @@ export interface components {
       /** @description Metadata fields captured in this revision (only present when metadata gating is enabled) */
       metadata?: {
         description?: string;
-        /** @description The userId of the owner */
+        /** @description The userId of the owner (or raw owner name/email for legacy records) */
         owner?: string;
         project?: string;
         tags?: (string)[];
@@ -5068,7 +5068,7 @@ export interface components {
       hypothesis: string;
       description: string;
       tags: (string)[];
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       archived: boolean;
       status: string;
@@ -5704,7 +5704,7 @@ export interface components {
       hypothesis: string;
       description: string;
       tags: (string)[];
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       archived: boolean;
       status: string;
@@ -6020,7 +6020,7 @@ export interface components {
       /** Format: date-time */
       dateUpdated: string;
       name: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner?: string;
       /** @description When type = 'condition', this is the JSON-encoded condition for the group */
       condition?: string;
@@ -6050,7 +6050,7 @@ export interface components {
       id: string;
       name: string;
       description: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       projects: (string)[];
       tags: (string)[];
@@ -6168,7 +6168,7 @@ export interface components {
       id: string;
       name: string;
       description: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       projects: (string)[];
       tags: (string)[];
@@ -6357,7 +6357,7 @@ export interface components {
       dateUpdated: string;
       name: string;
       description?: string;
-      /** @description The userId of the owner */
+      /** @description The userId of the owner (or raw owner name/email for legacy records) */
       owner: string;
       isPublic: boolean;
       /** @description The attributes to set when using this Archetype */
@@ -6626,7 +6626,7 @@ export interface operations {
                 dateUpdated: string;
                 archived: boolean;
                 description: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 project: string;
                 /** @enum {string} */
@@ -7682,7 +7682,7 @@ export interface operations {
               dateUpdated: string;
               archived: boolean;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               project: string;
               /** @enum {string} */
@@ -8328,7 +8328,7 @@ export interface operations {
               dateUpdated: string;
               archived: boolean;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               project: string;
               /** @enum {string} */
@@ -9270,7 +9270,7 @@ export interface operations {
                   /** @description Metadata fields captured in this revision (only present when metadata gating is enabled) */
                   metadata?: {
                     description?: string;
-                    /** @description The userId of the owner */
+                    /** @description The userId of the owner (or raw owner name/email for legacy records) */
                     owner?: string;
                     project?: string;
                     tags?: (string)[];
@@ -9734,7 +9734,7 @@ export interface operations {
               dateUpdated: string;
               archived: boolean;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               project: string;
               /** @enum {string} */
@@ -10412,7 +10412,7 @@ export interface operations {
               dateUpdated: string;
               archived: boolean;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               project: string;
               /** @enum {string} */
@@ -11061,7 +11061,7 @@ export interface operations {
               dateUpdated: string;
               archived: boolean;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               project: string;
               /** @enum {string} */
@@ -12026,7 +12026,7 @@ export interface operations {
                 /** @description Metadata fields captured in this revision (only present when metadata gating is enabled) */
                 metadata?: {
                   description?: string;
-                  /** @description The userId of the owner */
+                  /** @description The userId of the owner (or raw owner name/email for legacy records) */
                   owner?: string;
                   project?: string;
                   tags?: (string)[];
@@ -12325,7 +12325,7 @@ export interface operations {
                 id: string;
                 dateCreated: string;
                 dateUpdated: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 datasourceId: string;
                 identifierType: string;
@@ -12383,7 +12383,7 @@ export interface operations {
               id: string;
               dateCreated: string;
               dateUpdated: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -12417,7 +12417,7 @@ export interface operations {
               id: string;
               dateCreated: string;
               dateUpdated: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -12474,7 +12474,7 @@ export interface operations {
               id: string;
               dateCreated: string;
               dateUpdated: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -12532,7 +12532,7 @@ export interface operations {
           "application/json": ({
             segments: ({
                 id: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 datasourceId: string;
                 identifierType: string;
@@ -12606,7 +12606,7 @@ export interface operations {
           "application/json": {
             segment: {
               id: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -12645,7 +12645,7 @@ export interface operations {
           "application/json": {
             segment: {
               id: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -12718,7 +12718,7 @@ export interface operations {
           "application/json": {
             segment: {
               id: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               identifierType: string;
@@ -13240,7 +13240,7 @@ export interface operations {
                 hypothesis: string;
                 description: string;
                 tags: (string)[];
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 archived: boolean;
                 status: string;
@@ -13674,7 +13674,7 @@ export interface operations {
               hypothesis: string;
               description: string;
               tags: (string)[];
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               archived: boolean;
               status: string;
@@ -13951,7 +13951,7 @@ export interface operations {
               hypothesis: string;
               description: string;
               tags: (string)[];
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               archived: boolean;
               status: string;
@@ -14398,7 +14398,7 @@ export interface operations {
               hypothesis: string;
               description: string;
               tags: (string)[];
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               archived: boolean;
               status: string;
@@ -15060,7 +15060,7 @@ export interface operations {
                 managedBy: "" | "api" | "config" | "admin";
                 dateCreated: string;
                 dateUpdated: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 datasourceId: string;
                 name: string;
@@ -15334,7 +15334,7 @@ export interface operations {
               managedBy: "" | "api" | "config" | "admin";
               dateCreated: string;
               dateUpdated: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               name: string;
@@ -15456,7 +15456,7 @@ export interface operations {
               managedBy: "" | "api" | "config" | "admin";
               dateCreated: string;
               dateUpdated: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               datasourceId: string;
               name: string;
@@ -15848,7 +15848,7 @@ export interface operations {
               hypothesis: string;
               description: string;
               tags: (string)[];
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               archived: boolean;
               status: string;
@@ -16169,7 +16169,7 @@ export interface operations {
                 /** Format: date-time */
                 dateUpdated: string;
                 name: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner?: string;
                 /** @description When type = 'condition', this is the JSON-encoded condition for the group */
                 condition?: string;
@@ -16229,7 +16229,7 @@ export interface operations {
               /** Format: date-time */
               dateUpdated: string;
               name: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner?: string;
               /** @description When type = 'condition', this is the JSON-encoded condition for the group */
               condition?: string;
@@ -16266,7 +16266,7 @@ export interface operations {
               /** Format: date-time */
               dateUpdated: string;
               name: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner?: string;
               /** @description When type = 'condition', this is the JSON-encoded condition for the group */
               condition?: string;
@@ -16318,7 +16318,7 @@ export interface operations {
               /** Format: date-time */
               dateUpdated: string;
               name: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner?: string;
               /** @description When type = 'condition', this is the JSON-encoded condition for the group */
               condition?: string;
@@ -16633,7 +16633,7 @@ export interface operations {
                 dateUpdated: string;
                 name: string;
                 description?: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 isPublic: boolean;
                 /** @description The attributes to set when using this Archetype */
@@ -16670,7 +16670,7 @@ export interface operations {
               dateUpdated: string;
               name: string;
               description?: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               isPublic: boolean;
               /** @description The attributes to set when using this Archetype */
@@ -16700,7 +16700,7 @@ export interface operations {
               dateUpdated: string;
               name: string;
               description?: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               isPublic: boolean;
               /** @description The attributes to set when using this Archetype */
@@ -16743,7 +16743,7 @@ export interface operations {
               dateUpdated: string;
               name: string;
               description?: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               isPublic: boolean;
               /** @description The attributes to set when using this Archetype */
@@ -17023,7 +17023,7 @@ export interface operations {
                 id: string;
                 name: string;
                 description: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 projects: (string)[];
                 tags: (string)[];
@@ -17134,7 +17134,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
@@ -17216,7 +17216,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
@@ -17366,7 +17366,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
@@ -17685,7 +17685,7 @@ export interface operations {
                 id: string;
                 name: string;
                 description: string;
-                /** @description The userId of the owner */
+                /** @description The userId of the owner (or raw owner name/email for legacy records) */
                 owner: string;
                 projects: (string)[];
                 tags: (string)[];
@@ -18008,7 +18008,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
@@ -18157,7 +18157,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
@@ -18468,7 +18468,7 @@ export interface operations {
               id: string;
               name: string;
               description: string;
-              /** @description The userId of the owner */
+              /** @description The userId of the owner (or raw owner name/email for legacy records) */
               owner: string;
               projects: (string)[];
               tags: (string)[];
